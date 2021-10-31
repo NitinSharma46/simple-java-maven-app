@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Compile') {
+            steps {
+                // Get some code from a GitHub repository
+                sh "mvn compile"
+            }
+        }
+        stage('Unit test') {
+            steps {
+                // Get some code from a GitHub repository
+                sh "mvn test"
+        }        
+
+        }
+    }
+}
+
